@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- googleMapAPI -->
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_SWN2SOs1rTInc4-eOU_BDqEb9RUanBc&callback=console.debug&libraries=maps,marker&v=beta"
+    ></script>
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/aa285c689f.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- script & js -->
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="tabs">
+        <a href="#tab1" class="active">
+          <i class="fa-regular fa-face-smile"></i> london
+        </a>
+        <a href="#tab2"> <i class="fa-regular fa-comment-dots"></i> paris </a>
+        <a href="#tab3"> <i class="fa-solid fa-camera"></i>new york</a>
+        <a href="#tab4"><i class="fa-solid fa-heart"></i>dubai</a>
+      </div>
+      <div class="tab-contents">
+        <div id="tab1" class="tab">
+          <div class="tab-left">
+            <div class="tab-img london-img">
+              <img src="./imgs/london/img01.jpg" alt="01" />
+              <div class="slider-btns">
+                <span class="slider-btn .tab1-btn active"></span>
+                <span class="slider-btn .tab1-btn"></span>
+                <span class="slider-btn .tab1-btn"></span>
+              </div>
+            </div>
+            <div id="map">
+              <gmp-map
+                center="51.50740432739258,-0.12767203152179718"
+                zoom="10"
+                map-id="DEMO_MAP_ID"
+              >
+                <gmp-advanced-marker
+                  position="51.50740432739258,-0.12767203152179718"
+                  title="My location"
+                ></gmp-advanced-marker>
+              </gmp-map>
+            </div>
+          </div>
+          <div class="tab-info">
+            <h2>역사와 현대 문화의 조화</h2>
+            <p>
+              런던은 고대와 현대가 어우러진 매력적인 도시로, 웨스트민스터 사원,
+              런던 타워, 버킹엄 궁전과 같은 역사적인 랜드마크가 곳곳에 자리잡고
+              있습니다. 타워 브리지와 런던 아이와 같은 현대적인 명소도 많은
+              이들의 발길을 끌어당깁니다. 세계적인 박물관과 미술관, 웨스트엔드
+              극장가의 다채로운 공연, 그리고 전 세계의 미식을 즐길 수 있는
+              레스토랑들이 어우러져 런던은 언제나 새로운 경험과 문화적
+              풍요로움을 제공합니다. 또한, 템스강을 따라 걷다 보면 도시의 과거와
+              현재를 동시에 느낄 수 있는 특별한 시간을 보낼 수 있습니다.
+            </p>
+          </div>
+        </div>
+        <div id="tab2" class="tab">
+          <div class="tab-left">
+            <div class="tab-img paris-img">
+              <img src="./imgs/city-02.jpg" alt="01" />
+              <div class="slider-btns">
+                <span class="slider-btn tab2-btn active"></span>
+                <span class="slider-btn tab2-btn"></span>
+                <span class="slider-btn tab2-btn"></span>
+              </div>
+            </div>
+            <div id="map">
+              <gmp-map
+                center="48.85763931274414,2.351392984390259"
+                zoom="10"
+                map-id="DEMO_MAP_ID"
+              >
+                <gmp-advanced-marker
+                  position="48.85763931274414,2.351392984390259"
+                  title="My location"
+                ></gmp-advanced-marker>
+              </gmp-map>
+            </div>
+          </div>
+          <div class="tab-info">
+            <h2>세련된 문화, 역사적인 건축물, 그리고 로맨틱한 분위기</h2>
+            <p>
+              파리는 예술과 문화의 중심지로, 에펠탑, 루브르 박물관, 노트르담
+              대성당 등 세계적으로 유명한 랜드마크들이 자리하고 있습니다. 세련된
+              카페, 고급 레스토랑, 패션 부티크가 즐비한 이 도시는 로맨틱한
+              분위기와 함께 혁신적인 예술과 디자인으로도 유명합니다. 또한,
+              센강을 따라 산책하며 감상할 수 있는 아름다운 건축물과 역사적인
+              장소들은 파리를 더욱 특별하게 만듭니다.
+            </p>
+          </div>
+        </div>
+        <div id="tab3" class="tab">
+          <div class="tab-left">
+            <div class="tab-img newyork-img">
+              <img src="./imgs/newyork/img01.jpg" alt="01" />
+              <div class="slider-btns">
+                <span class="slider-btn tab3-btn active"></span>
+                <span class="slider-btn tab3-btn"></span>
+                <span class="slider-btn tab3-btn"></span>
+              </div>
+            </div>
+            <div id="map">
+              <gmp-map
+                center="40.713069915771484,-74.00605773925781"
+                zoom="10"
+                map-id="DEMO_MAP_ID"
+              >
+                <gmp-advanced-marker
+                  position="40.713069915771484,-74.00605773925781"
+                  title="My location"
+                ></gmp-advanced-marker>
+              </gmp-map>
+            </div>
+          </div>
+          <div class="tab-info">
+            <h2>세계 경제의 중심지</h2>
+            <p>
+              뉴욕은 세계적인 경제와 문화의 중심지로, 타임스퀘어, 센트럴 파크,
+              자유의 여신상 등 상징적인 랜드마크들이 가득합니다. 이 도시는
+              브로드웨이의 화려한 공연, 다양한 예술 갤러리, 미슐랭 스타
+              레스토랑을 포함한 무한한 즐길 거리로 유명합니다. 다채로운 인종과
+              문화가 어우러진 뉴욕은 24시간 잠들지 않는 에너지와 끝없는
+              가능성으로 가득한 매혹적인 도시입니다
+            </p>
+          </div>
+        </div>
+        <div id="tab4" class="tab">
+          <div class="tab-left">
+            <div class="tab-img dubai-img">
+              <img src="./imgs/dubai/img01.jpg" alt="01" />
+              <div class="slider-btns">
+                <span class="slider-btn tab4-btn active"></span>
+                <span class="slider-btn tab4-btn"></span>
+                <span class="slider-btn tab4-btn"></span>
+              </div>
+            </div>
+            <div id="map">
+              <gmp-map
+                center="25.204936981201172,55.270782470703125"
+                zoom="10"
+                map-id="DEMO_MAP_ID"
+              >
+                <gmp-advanced-marker
+                  position="25.204936981201172,55.270782470703125"
+                  title="My location"
+                ></gmp-advanced-marker>
+              </gmp-map>
+            </div>
+          </div>
+          <div class="tab-info">
+            <h2>혁신적인 미래 도시</h2>
+            <p>
+              두바이는 혁신적인 건축물과 호화로운 라이프스타일로 유명한 도시로,
+              세계 최고층 빌딩인 부르즈 할리파와 초대형 인공섬 팜 주메이라 등이
+              위치해 있습니다. 전통과 현대가 조화를 이루는 두바이는 럭셔리
+              쇼핑몰, 고급 레스토랑, 그리고 다양한 문화 행사들로 관광객들에게
+              독특한 경험을 제공합니다. 또한, 사막 사파리와 같은 이색적인
+              액티비티와 화려한 해변 리조트가 두바이를 더욱 매력적인 여행지로
+              만듭니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

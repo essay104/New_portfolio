@@ -1,0 +1,380 @@
+@import url("./reset.css");
+
+body {
+  position: relative;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  perspective: 2500px;
+}
+
+video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(0.6);
+  position: fixed;
+  z-index: -1;
+}
+
+/* article common */
+
+.articles {
+  width: 560px;
+  height: 800px;
+  position: absolute;
+  margin-top: 80px;
+  transform-style: preserve-3d;
+  top: 50%;
+  left: 50%;
+  margin-top: -400px;
+  margin-left: -300px;
+  animation: ani linear 30s infinite;
+  gap: 10px;
+}
+
+@keyframes ani {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+article {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+
+article:hover {
+  border: 5px solid #fff;
+  cursor: pointer;
+}
+
+/* section01 */
+
+.section01 {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
+    url("./src/section01Bg.jfif") top;
+  color: #fff;
+}
+
+.section01 h1 {
+  margin-bottom: 15px;
+}
+
+.section01 .section01-texts {
+  position: absolute;
+  left: 5%;
+  bottom: 10%;
+}
+
+/* section02 */
+
+.section02 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.section02-contents {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+}
+
+.section02-contents header {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+header .section02-texts {
+  font-weight: bold;
+}
+
+header .section02-texts p {
+  font-size: 12px;
+  color: #999;
+}
+
+header .header-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+header .journalist-profile {
+  display: flex;
+  gap: 10px;
+}
+
+header .journalist-profile img {
+  width: 40px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+header .journalist-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+}
+
+header .journalist-info p:first-child {
+  font-size: 12px;
+}
+
+header .journalist-info p:last-child span {
+  font-weight: bold;
+}
+
+header .article-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+header .article-info .fa-solid {
+  border: 1px solid #eee;
+  padding: 5px;
+  border-radius: 5px;
+  color: #ddd;
+  display: flex;
+  gap: 5px;
+}
+
+header .article-info .fa-eye {
+  color: #000;
+}
+
+header .article-info .fa-heart {
+  color: crimson;
+}
+
+header .article-info .fa-comment {
+  color: orange;
+}
+
+header .article-info p {
+  color: #000;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.section02-article {
+  width: 450px;
+  height: 590px;
+  overflow: hidden;
+  font-size: 12px;
+  margin: auto auto;
+  margin-top: 40px;
+}
+
+.section02-article img {
+  width: 375px;
+  height: 200px;
+  float: right;
+  padding: 5px;
+}
+
+/* section04 */
+
+.section03 {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),
+    url("./src/section04bg.jpeg") center/cover no-repeat;
+  color: #fff;
+}
+
+.section03 h1 {
+  margin-bottom: 15px;
+}
+
+.section03 .section03-texts {
+  position: absolute;
+  left: 5%;
+  bottom: 10%;
+}
+
+/* section04 */
+
+.section04 {
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.section04 header {
+}
+
+.section04 header img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  filter: saturate(1.5);
+}
+
+.section04-container-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.section04 .section04-container .section04-container-header h1 {
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+
+.section04-container-main {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section04-foods {
+  display: flex;
+  justify-content: space-between;
+  width: 415px;
+  height: 100px;
+  align-content: start;
+}
+
+/* section05 */
+
+.section05 {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
+    url("./src/section06bg.jpg") center/cover no-repeat;
+  color: #fff;
+}
+
+.section05 h1 {
+  margin-bottom: 15px;
+}
+
+.section05 .section05-texts {
+  position: absolute;
+  left: 5%;
+  bottom: 10%;
+}
+
+/* section06 */
+
+.section06 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sns {
+  width: 390px;
+  height: 150px;
+  background: #000;
+  background: rgba(255, 255, 255, 0.6);
+  border: 3px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.sns img {
+  width: 50px;
+  height: 50px;
+}
+
+.sns-info .sns-name {
+  font-size: 14px;
+}
+
+.sns-info .sns-domain {
+  font-size: 20px;
+}
+
+/* section07 */
+
+.section07 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sns {
+  width: 390px;
+  height: 150px;
+  background: #000;
+  background: rgba(255, 255, 255, 0.6);
+  border: 3px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.sns img {
+  width: 50px;
+  height: 50px;
+}
+
+.sns-info .sns-name {
+  font-size: 14px;
+}
+
+.sns-info .sns-domain {
+  font-size: 20px;
+}
+
+.section01 {
+  transform: rotateY(0deg) translateZ(-746px);
+}
+.section02 {
+  transform: rotateY(45deg) translateZ(-746px);
+}
+.section03 {
+  transform: rotateY(90deg) translateZ(-746px);
+}
+.section04 {
+  transform: rotateY(135deg) translateZ(-746px);
+}
+.section05 {
+  transform: rotateY(180deg) translateZ(-746px);
+}
+.section06 {
+  transform: rotateY(225deg) translateZ(-746px);
+}
+.section07 {
+  transform: rotateY(270deg) translateZ(-746px);
+}
+.section08 {
+  transform: rotateY(315deg) translateZ(-746px);
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- uuidv4 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuidv4.min.js"></script>
+    <!-- js&style -->
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+    <!-- font awesom -->
+    <script
+      src="https://kit.fontawesome.com/aa285c689f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="headeLine">
+      <div class="info">
+        <p>마우스 우클릭으로 제거할 수 있습니다</p>
+      </div>
+    </div>
+    <div class="container">
+      <form name="kanban-board" method="post">
+        <input type="text" placeholder="할 일을 추가하세요" />
+        <input type="submit" value="할 일 추가" />
+      </form>
+      <div class="boards">
+        <div class="board">
+          <h2>To Do</h2>
+          <div id="todo" class="list"></div>
+        </div>
+        <div class="board">
+          <h2>Doing</h2>
+          <div id="doing" class="list"></div>
+        </div>
+        <div class="board">
+          <h2>Done</h2>
+          <div id="done" class="list"></div>
+        </div>
+        <div class="board">
+          <h2>Fail</h2>
+          <div id="fail" class="list"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
