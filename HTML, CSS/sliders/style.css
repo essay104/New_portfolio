@@ -37,10 +37,39 @@ section {
   cursor: pointer;
   font-size: 1.5rem;
   transition: all 0.5s;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .subject:hover {
   color: #ddd;
+}
+
+.type-box {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slider-type-sub {
+  transform: translateY(-100%);
+  transition: all 0.5s;
+}
+
+.slider-type-sub.animate {
+  animation: slideDown 0.5s forwards;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 /* slider util */
