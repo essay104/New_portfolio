@@ -12,7 +12,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
 section {
   display: flex;
   justify-content: center;
@@ -21,25 +20,14 @@ section {
   height: 100vh;
   flex-direction: column;
   gap: 25px;
+  background: #fff;
 }
 
 .slider-wrap {
-  width: 90%;
   height: 350px;
   background-color: #fff;
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
   border-radius: 3px 3px 0 0;
-}
-
-.subject {
-  display: flex;
-  gap: 5px;
-  cursor: pointer;
-  font-size: 1.5rem;
-  transition: all 0.5s;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .subject:hover {
@@ -226,13 +214,18 @@ section {
   width: 40px;
   height: 40px;
   font-size: 3rem;
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.4);
   transition: all 0.3s;
 }
 
 .to-left:hover,
 .to-right:hover {
   color: rgba(0, 0, 0, 0.8);
+}
+
+.to-left.active,
+.to-right.active {
+  color: #eee;
 }
 
 .to-left {
@@ -264,7 +257,9 @@ section {
 .info-box {
   width: 750px;
   height: 150px;
-  border: 1px solid #000;
+  background: #151739;
+  border-top: 10px solid crimson;
+  color: #fff;
   border-radius: 0 0 3px 3px;
   display: flex;
   justify-content: center;

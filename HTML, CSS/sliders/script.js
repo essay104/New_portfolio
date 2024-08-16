@@ -1,8 +1,5 @@
 const controllBtn = document.querySelector(".controll-btn");
 const autoSliderController = document.querySelector(".auto-slider-controller");
-const sliderType = document.querySelectorAll(".slider-type");
-const sliderTypeSub = document.querySelector(".slider-type-sub");
-const typeBox = document.querySelector(".type-box");
 const sliders = document.querySelector(".sliders");
 const right = document.querySelector(".to-right");
 const left = document.querySelector(".to-left");
@@ -20,22 +17,6 @@ autoSliderController.addEventListener("click", () => {
     controllBtn.classList.add("active");
     autoSliderController.style.backgroundColor = `#eee`;
   }
-});
-
-sliderTypeSub.textContent = "Version 01";
-
-sliderType.forEach((type, idx) => {
-  type.addEventListener("click", () => {
-    console.log("type!!");
-    sliderType.forEach((it) => {
-      it.classList.remove("active");
-    });
-    type.classList.add("active");
-    sliderTypeSub.textContent = type.textContent;
-    sliderTypeSub.classList.remove("animate");
-    void sliderTypeSub.offsetWidth;
-    sliderTypeSub.classList.add("animate");
-  });
 });
 
 const getSliderData = () => {
@@ -71,6 +52,22 @@ const createSlider = (players) => {
 
   let currentIndex = 0;
 
+  const arrowInit = () => {
+    if (currentIndex == 0) {
+      left.classList.add("active");
+    } else {
+      left.classList.remove("active");
+    }
+
+    if (currentIndex == players.length) {
+      right.classList.add("active");
+    } else {
+      right.classList.remove("active");
+    }
+  };
+
+  arrowInit();
+
   const moveSlider = (index) => {
     sliders.style.transform = `translateX(-${sliderWidth * index}px)`;
     updatePlayerInfo(players, index);
@@ -84,6 +81,7 @@ const createSlider = (players) => {
     }
     moveSlider(currentIndex);
     currentPage.textContent = currentIndex + 1;
+    arrowInit();
   });
 
   left.addEventListener("click", () => {
@@ -94,6 +92,7 @@ const createSlider = (players) => {
     }
     moveSlider(currentIndex);
     currentPage.textContent = currentIndex + 1;
+    arrowInit();
   });
 };
 
