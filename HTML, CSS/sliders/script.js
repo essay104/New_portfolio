@@ -6,9 +6,11 @@ const typeBox = document.querySelector(".type-box");
 const sliders = document.querySelector(".sliders");
 const right = document.querySelector(".to-right");
 const left = document.querySelector(".to-left");
+const playerName = document.querySelector(".player-name");
+const nationality = document.querySelector(".nationality");
+const playerPosition = document.querySelector(".player-position");
 
 autoSliderController.addEventListener("click", () => {
-  console.log("click!");
   if (controllBtn.classList.contains("active")) {
     controllBtn.textContent = "AUTO";
     controllBtn.classList.remove("active");
@@ -41,6 +43,7 @@ const getSliderData = () => {
     .then((response) => response.json())
     .then((data) => {
       createSlider(data.players);
+      updatePlayerInfo(data.players, 0);
     });
 };
 
@@ -70,6 +73,7 @@ const createSlider = (players) => {
 
   const moveSlider = (index) => {
     sliders.style.transform = `translateX(-${sliderWidth * index}px)`;
+    updatePlayerInfo(players, index);
   };
 
   right.addEventListener("click", () => {
@@ -91,6 +95,13 @@ const createSlider = (players) => {
     moveSlider(currentIndex);
     currentPage.textContent = currentIndex + 1;
   });
+};
+
+const updatePlayerInfo = (players, index) => {
+  const player = players[index];
+  playerName.textContent = `${player.number} ${player.name}`;
+  nationality.src = player.flag;
+  playerPosition.textContent = player.position;
 };
 
 getSliderData();

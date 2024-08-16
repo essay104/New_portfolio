@@ -28,7 +28,7 @@ section {
   height: 350px;
   background-color: #fff;
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
-  border-radius: 3px;
+  border-radius: 3px 3px 0 0;
 }
 
 .subject {
@@ -161,11 +161,29 @@ section {
   justify-content: center;
   align-items: center;
   position: relative;
+  flex-direction: column;
 }
 
 .slider-wrap {
   overflow: hidden;
   width: 750px;
+  position: relative;
+}
+
+.slider-wrap::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 70%,
+      rgba(0, 0, 0, 0.6)
+    ),
+    linear-gradient(to left, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.6));
+  z-index: 80;
 }
 
 .slider-wrap::after {
@@ -241,4 +259,27 @@ section {
 .logo img {
   width: 100px;
   object-fit: contain;
+}
+
+.info-box {
+  width: 750px;
+  height: 150px;
+  border: 1px solid #000;
+  border-radius: 0 0 3px 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.player-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.nationality {
+  width: 25px;
+  height: 15px;
 }
