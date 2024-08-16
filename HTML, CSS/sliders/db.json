@@ -1,0 +1,151 @@
+{
+  "players": [
+    {
+      "name": "Aaron Ramsdale",
+      "number": "01",
+      "nationality": "England",
+      "position": "Goalkeeper",
+      "src": "./imgs/01.jpg"
+    },
+    {
+      "name": "David Raya",
+      "number": "22",
+      "nationality": "Spain",
+      "position": "Goalkeeper",
+      "src": "./imgs/22.jpg"
+    },
+    {
+      "name": "William Saliba",
+      "number": "02",
+      "nationality": "France",
+      "position": "Defender",
+      "src": "./imgs/02.jpg"
+    },
+    {
+      "name": "Gabriel Magalhães",
+      "number": "06",
+      "nationality": "Brazil",
+      "position": "Defender",
+      "src": "./imgs/06.jpg"
+    },
+    {
+      "name": "Jurriën Timber",
+      "number": "12",
+      "nationality": "Netherlands",
+      "position": "Defender",
+      "src": "./imgs/12.png"
+    },
+    {
+      "name": "Oleksandr Zinchenko",
+      "number": "17",
+      "nationality": "Ukraine",
+      "position": "Defender",
+      "src": "./imgs/17.jpg"
+    },
+    {
+      "name": "Takehiro Tomiyasu",
+      "number": "18",
+      "nationality": "Japan",
+      "position": "Defender",
+      "src": "./imgs/18.png"
+    },
+    {
+      "name": "Jakub Kiwior",
+      "number": "15",
+      "nationality": "Poland",
+      "position": "Defender",
+      "src": "./imgs/15.jpg"
+    },
+    {
+      "name": "Ben White",
+      "number": "04",
+      "nationality": "England",
+      "position": "Defender",
+      "src": "./imgs/04.jpg"
+    },
+    {
+      "name": "Declan Rice",
+      "number": "41",
+      "nationality": "England",
+      "position": "Midfielder",
+      "src": "./imgs/41.jpg"
+    },
+    {
+      "name": "Thomas Partey",
+      "number": "05",
+      "nationality": "Ghana",
+      "position": "Midfielder",
+      "src": "./imgs/05.jpg"
+    },
+    {
+      "name": "Martin Ødegaard",
+      "number": "08",
+      "nationality": "Norway",
+      "position": "Midfielder",
+      "src": "./imgs/08.jpg"
+    },
+    {
+      "name": "Jorginho",
+      "number": "20",
+      "nationality": "Italy",
+      "position": "Midfielder",
+      "src": "./imgs/20.jpg"
+    },
+    {
+      "name": "Kai Havertz",
+      "number": "29",
+      "nationality": "Germany",
+      "position": "Midfielder",
+      "src": "./imgs/29.jpg"
+    },
+    {
+      "name": "Fábio Vieira",
+      "number": "21",
+      "nationality": "Portugal",
+      "position": "Midfielder",
+      "src": "./imgs/21.jpg"
+    },
+    {
+      "name": "Bukayo Saka",
+      "number": "07",
+      "nationality": "England",
+      "position": "Forward",
+      "src": "./imgs/07.jpg"
+    },
+    {
+      "name": "Gabriel Jesus",
+      "number": "09",
+      "nationality": "Brazil",
+      "position": "Forward",
+      "src": "./imgs/09.jpg"
+    },
+    {
+      "name": "Gabriel Martinelli",
+      "number": "11",
+      "nationality": "Brazil",
+      "position": "Forward",
+      "src": "./imgs/11.png"
+    },
+    {
+      "name": "Leandro Trossard",
+      "number": "19",
+      "nationality": "Belgium",
+      "position": "Forward",
+      "src": "./imgs/19.jpg"
+    },
+    {
+      "name": "Eddie Nketiah",
+      "number": "14",
+      "nationality": "England",
+      "position": "Forward",
+      "src": "./imgs/14.jpg"
+    },
+    {
+      "name": "Reiss Nelson",
+      "number": "24",
+      "nationality": "England",
+      "position": "Forward",
+      "src": "./imgs/24.jpg"
+    }
+  ]
+}

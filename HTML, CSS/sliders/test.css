@@ -1,0 +1,41 @@
+.slider-wrap {
+  position: relative; /* 슬라이더 래퍼가 위치의 기준이 됩니다 */
+  overflow: hidden; /* 슬라이더 내부 콘텐츠가 넘칠 때 숨기기 */
+}
+
+.sliders {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slider-move {
+  position: absolute; /* 화살표 버튼을 절대 위치시킴 */
+  top: 50%; /* 버튼을 수직으로 가운데에 배치 */
+  width: 100%;
+  transform: translateY(-50%); /* 수직으로 가운데 정렬 */
+  z-index: 10; /* 버튼이 슬라이더 위에 오도록 설정 */
+}
+
+.to-left {
+  position: absolute;
+  left: -40px; /* 왼쪽 버튼을 슬라이더 박스 왼쪽 밖으로 배치 */
+}
+
+.to-right {
+  position: absolute;
+  right: -40px; /* 오른쪽 버튼을 슬라이더 박스 오른쪽 밖으로 배치 */
+}
+
+.to-left, .to-right {
+  background-color: rgba(0, 0, 0, 0.5); /* 반투명한 배경 */
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px; /* 아이콘 크기 조정 */
+  border-radius: 50%; /* 동그란 버튼 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
