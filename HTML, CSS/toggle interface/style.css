@@ -13,15 +13,20 @@ li {
   list-style: none;
 }
 
+:root {
+  --yellow-color: #ffd700;
+  --red-color: #dc143c;
+  --blue-color: #4169e1;
+}
+
 /* header */
 
 header {
   width: 100%;
   height: 80px;
   position: absolute;
-  transition: all 0.3s;
+  transition: all 0.5s;
   z-index: 100;
-  overflow: hidden;
 }
 
 .header-top {
@@ -94,11 +99,16 @@ header {
 
 .header-bottom {
   width: 100%;
-  height: 120px;
+  height: 0px;
   position: absolute;
-  background-color: #fff;
+  background-color: royalblue;
   bottom: 0;
   transform: translateY(100%);
+  transition: all 0.5s;
+}
+
+header.active .header-bottom {
+  height: 120px;
 }
 
 .drop-down-container {
@@ -111,6 +121,11 @@ header {
 .dropdown li {
   color: #fff;
   width: 80px;
+  visibility: hidden;
+}
+
+header.active .dropdown li {
+  visibility: visible;
 }
 
 .dropdown li a:hover {
@@ -119,7 +134,7 @@ header {
 
 /* section */
 
-section {
+/* section {
   width: 100%;
   height: 100vh;
   background: url("./images/photo-01.jpg") center/cover no-repeat;
@@ -133,6 +148,75 @@ section::after {
   width: 100%;
   height: 100vh;
   background: rgba(65, 105, 225, 0.4);
+} */
+
+.tabs {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.items {
+  width: 300%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+
+.items div {
+  width: 33.33%;
+  height: 100vh;
+  float: left;
+  position: relative;
+}
+
+.items div:nth-child(1) {
+  background: url("./images/photo-01.jpg") center center fixed no-repeat;
+}
+.items div:nth-child(2) {
+  background: url("./images/photo-02.jpg") center center fixed no-repeat;
+}
+.items div:nth-child(3) {
+  background: url("./images/photo-03.jpg") center center fixed no-repeat;
+}
+
+.items div:nth-child(1)::before,
+.items div:nth-child(2)::before,
+.items div:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.items div:nth-child(1)::before {
+  background: linear-gradient(135deg, var(--yellow-color), transparent);
+}
+.items div:nth-child(2)::before {
+  background: linear-gradient(135deg, var(--red-color), transparent);
+}
+.items div:nth-child(3)::before {
+  background: linear-gradient(135deg, var(--blue-color), transparent);
+}
+
+.items div h1 {
+  position: relative;
+  font-size: 120px;
+  color: #fff;
+  text-align: center;
+  transform: translateY(-200px);
+  opacity: 0;
+  transition: all 0.5s;
+  transition-delay: 0.5s;
+}
+.items div h1.active {
+  transform: translateY(200px);
+  opacity: 1;
 }
 
 /* footer */
@@ -161,14 +245,26 @@ footer ul li {
   font-size: 1.2rem;
 }
 
-footer ul li:first-child:hover {
-  color: royalblue;
+.buttons:first-child:hover {
+  color: var(--yellow-color);
 }
 
-footer ul li:nth-child(2):hover {
-  color: crimson;
+.buttons:nth-child(2):hover {
+  color: var(--red-color);
 }
 
-footer ul li:last-child:hover {
-  color: gold;
+.buttons:nth-child(3):hover {
+  color: var(--blue-color);
+}
+
+.button:nth-child(1).active {
+  background-color: var(--yellow-color);
+}
+
+.button:nth-child(2).active {
+  background-color: var(--yellow-color);
+}
+
+.button:nth-child(3).active {
+  background-color: var(--yellow-color);
 }
