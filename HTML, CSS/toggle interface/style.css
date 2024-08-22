@@ -37,9 +37,9 @@ header {
   justify-content: center;
   align-items: center;
   padding: 35px;
-  background-color: #fff;
+  background-color: #000;
   position: relative;
-  border-bottom: 5px solid royalblue;
+  border-bottom: 5px solid var(--yellow-color);
 }
 
 .logo {
@@ -69,7 +69,7 @@ header {
   position: relative;
   cursor: pointer;
   transition: all 0.3s;
-  color: royalblue;
+  color: var(--yellow-color);
 }
 
 .menu::before,
@@ -78,10 +78,15 @@ header {
   position: absolute;
   bottom: -5px;
   height: 3px;
-  background: royalblue;
+  background: #fff;
   width: 0%;
   transition: width 0.3s ease;
   border-radius: 3px;
+}
+
+.menu.active::before,
+.menu.active::after {
+  background: var(--red-color); /* 활성화된 상태의 색상 */
 }
 
 .menu::before {
@@ -101,7 +106,7 @@ header {
   width: 100%;
   height: 0px;
   position: absolute;
-  background-color: royalblue;
+  background-color: var(--yellow-color);
   bottom: 0;
   transform: translateY(100%);
   transition: all 0.5s;
@@ -121,11 +126,12 @@ header.active .header-bottom {
 .dropdown li {
   color: #fff;
   width: 80px;
-  visibility: hidden;
+  transition: all 0.3s;
+  opacity: 0;
 }
 
 header.active .dropdown li {
-  visibility: visible;
+  opacity: 1;
 }
 
 .dropdown li a:hover {
