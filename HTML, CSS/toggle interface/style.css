@@ -140,21 +140,6 @@ header.active .dropdown li {
 
 /* section */
 
-/* section {
-  width: 100%;
-  height: 100vh;
-  background: url("./images/photo-01.jpg") center/cover no-repeat;
-  position: relative;
-}
-
-section::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(65, 105, 225, 0.4);
-} */
 
 .tabs {
   width: 100%;

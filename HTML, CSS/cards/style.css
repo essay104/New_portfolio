@@ -7,12 +7,12 @@ section {
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(
-    to right bottom,
+    to right,
     #051937,
-    #444964,
-    #808195,
-    #bfbec8,
-    #ffffff
+    #0e2548,
+    #18315a,
+    #213e6c,
+    #2a4c7f
   );
   padding: 250px;
 }
@@ -32,7 +32,6 @@ section {
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
   height: 60vh;
-  /* border: 1px solid #000; */
   justify-content: center;
   align-items: center;
   gap: 25px;
@@ -40,39 +39,45 @@ section {
 
 .cards {
   height: 200px;
-  background: #fff;
+  background-color: #fff;
   border-radius: 5px;
-  overflow: hidden;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform-style: preserve-3d;
   transition: all 0.5s;
   position: relative;
+  transform-style: preserve-3d;
+  border: none;
 }
 
 .card-front,
 .card-back {
   position: absolute;
-  width: 100%;
+  width: 100.05%;
   height: 100%;
-  backface-visibility: hidden;
   border-radius: 5px;
+  backface-visibility: hidden;
+  perspective: 2000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-front {
-  background-color: #fff; /* 앞면 배경 */
+  background-color: #fff;
   z-index: 2;
   transform: rotateY(0deg);
 }
 
 .card-back {
-  background-color: #000; /* 뒷면 배경 */
   transform: rotateY(180deg);
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.cards:hover {
+.cards.active {
   transform: rotateY(180deg);
 }
 
@@ -81,8 +86,8 @@ section {
   height: 100%;
 }
 
-.busan img,
-.gwangju img {
+.gwangju img,
+.busan img {
   height: 60%;
 }
 
@@ -135,7 +140,7 @@ section {
   opacity: 0;
 }
 
-.bottom-menu:hover .hide-cards {
+.hide-cards.active {
   transform: translateY(-100%);
   opacity: 1;
   cursor: pointer;
