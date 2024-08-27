@@ -23,15 +23,6 @@ const daejeonImgs = [
   "daejeon04.jpg",
 ];
 
-const imgInit = {
-  seoul: 0,
-  busan: 0,
-  incheon: 0,
-  gwangju: 0,
-  daegu: 0,
-  daejeon: 0,
-};
-
 const city = {
   seoul: seoulImgs,
   busan: busanImgs,
@@ -44,13 +35,35 @@ const city = {
 cards.forEach((card) => {
   card.addEventListener("click", () => {
     const cardClass = card.classList[1];
-    const imgArray = city[cardClass];
-    const imgIndex = imgInit[cardClass];
 
-    const cardImg = document.querySelector
-  });
+    console.log(cardClass);
+    
+    const hiddenImg = document.querySelector(`.${cardClass}-info img`);
 
-  card.addEventListener("click", () => {
+    let currentImgs;
+    switch (cardClass) {
+      case "seoul":
+        console.log(seoul);
+        break;
+      case "busan":
+        console.log(busan);
+        break;
+      case "incheon":
+        console.log(incheon);
+        break;
+      case "gwangju":
+        console.log(gwangju);
+        break;
+      case "daegu":
+        console.log(daegu);
+        break;
+      case "daejeon":
+        console.log(daejeon);
+        break;
+      default:
+        currentImgs = null;
+    }
+
     cards.forEach((c) => {
       if (c !== card) {
         c.classList.remove("active");
